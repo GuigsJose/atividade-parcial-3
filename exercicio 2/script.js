@@ -12,9 +12,9 @@ function comparador(obj1, obj2) {
 }
 
 function encontrarDiferentes(obj1, obj2, chavePai = "") {
-    for (const chave in obj1) {
-        const valor1 = obj1[chave];
-        const valor2 = obj2[chave];
+    for (let chave in obj1) {
+        let valor1 = obj1[chave];
+        let valor2 = obj2[chave];
 
         if (typeof valor1 === 'object' && typeof valor2 === 'object') {
             encontrarDiferentes(valor1, valor2, chave);
@@ -51,3 +51,7 @@ const teste1 = {
 };
 
 console.log(comparador(teste, teste1));
+
+
+
+
